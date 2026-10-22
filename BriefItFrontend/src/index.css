@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+:root {
+  --paper: #f3f0e6;
+  --paper-raised: #fbf9f3;
+  --ink: #20281f;
+  --ink-soft: #5b6459;
+  --line: #d8d2c2;
+  --teal: #2b5d4f;
+  --teal-deep: #1d4237;
+  --ochre: #be6a2f;
+  --ochre-deep: #9c5423;
+  --danger: #a23b2e;
+
+  --font-display: "Archivo", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image: linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 32px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.15rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1.5px solid var(--teal-deep);
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--teal);
+  color: var(--paper-raised);
+  transition:
+    transform 0.1s ease,
+    background 0.15s ease;
+}
+
+button:hover {
+  background: var(--teal-deep);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: var(--line);
+  border-color: var(--line);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+  transform: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ochre);
+  outline-offset: 2px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper-raised);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+a {
+  color: var(--teal-deep);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--ochre-deep);
+}
